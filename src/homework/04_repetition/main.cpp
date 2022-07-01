@@ -32,43 +32,39 @@ int main()
      bool done = false;
      char ans = ' ';
          
-         do {
-             
-          
+         while (!done) {
+        
+        int choice = 0;
+        cout<<"Enter your choice"<<endl;
+        cout<<"Press 1: For Get GC Content"<<endl;
+        cout<<"Press 2: For Get DNA Complement"<<endl;
+        
+        
+        cin>>choice;
+        
+        switch (choice) {
+            case 1:
             
-             int choice = 0;
-             cout<<"Enter your choice"<<endl;
-             cout<<"Press 1: For Get GC Content"<<endl;
-             cout<<"Press 2: For Get DNA Complement"<<endl;
-             
-             
-             cin>>choice;
-             
-             switch (choice) {
-                 case 1:
-                 
-                     
-                     Percernt = get_gc_content(userDNA);
-                     cout<<Percernt<<endl;
-                     
-                 break;
-                 case 2:
-                     
-                     get_dna_complement(userDNA);
-                     
-                 break;
-             }
+                
+                Percernt = get_gc_content(userDNA);
+                cout<<Percernt<<endl;
+                
+            break;
+            case 2:
+                
+                get_dna_complement(userDNA);
+                
+            break;
+        }
 
-            
-             cout<<"Are you done? " <<"Y or N: ";
-             cin>>ans;
-             
-             if (ans == 'y' || ans == 'Y') {
-                 done = true;
-             }
-         }
-         while (!done);
-     
+       
+        cout<<"Are you done? " <<"Y or N: ";
+        cin>>ans;
+        
+        if (ans == 'y' || ans == 'Y') {
+            done = true;
+        }
+    }
      
      
     
