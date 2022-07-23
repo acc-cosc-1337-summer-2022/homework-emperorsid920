@@ -12,7 +12,7 @@ using namespace std;
 class Tic_Tac_Toe {
 private:
     string Player;
-    
+    string Winner;
   
     
     vector<string> pegs = vector<string> (9, " ");
@@ -21,6 +21,11 @@ private:
     void set_next_player();
     bool check_board_full();
     
+    //New
+    bool check_column_win();
+    bool check_row_win();
+    bool check_diagonal_win();
+    void set_winner();
     
 public:
     bool game_over();
@@ -29,6 +34,9 @@ public:
     void start_game(string);
     void display_board() const;
     void clear_board();
+    
+    //New
+    string get_winner();
 }; 
 
 #endif
