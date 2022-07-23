@@ -11,6 +11,8 @@ TEST_CASE("Verify Test Full Board") {
     
     Tic_Tac_Toe Game;
     
+    Game.start_game("X")
+    
     Game.mark_board(1);
     REQUIRE(Game. game_over() ==false);
     Game.mark_board(2);
@@ -31,4 +33,18 @@ TEST_CASE("Verify Test Full Board") {
     REQUIRE(Game. game_over() ==false);
     
     REQUIRE(Game. game_over() == true);
+    REQUIRE(Game.get_winner() == "C");
+}
+
+TEST_CASE("Verify get_player()") {
+    
+    Tic_Tac_Toe Game1 ,Game2;
+    Game1.start_game("X");
+    
+    REQUIRE(Game1.get_player() == "X");
+    
+    Game2.start_game("O");
+    REQUIRE(Game2.get_player() == "O");
+    
+    
 }
