@@ -119,7 +119,7 @@ TEST_CASE("Verify Row Win 2nd Row") {
     Game7.mark_board(3);
     Game7.mark_board(6);//W
     
-    REQUIRE(Game6.game_over() == true);
+    REQUIRE(Game7.game_over() == true);
     
 
 }
